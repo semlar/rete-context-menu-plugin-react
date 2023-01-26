@@ -1,18 +1,21 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import ReactMenu from "./Menu";
+import { createRoot } from "react-dom/client";
 import Menu from "../menu";
 import { injectItem } from "../utils";
+import ReactMenu from "./Menu";
 
 export default class extends Menu {
   constructor(editor, props) {
-    super();
+    super(null);
     this.props = props;
     this.items = [];
     this.position = [0, 0];
     this.visible = false;
     this.el = document.createElement("div");
     editor.view.container.appendChild(this.el);
+
+    this.root = createRoot(this.el)
+
 
     this.render();
   }
@@ -35,17 +38,14 @@ export default class extends Menu {
   }
 
   render() {
-    ReactDOM.render(
-      <ReactMenu
+    return this.root.render(<ReactMenu
         {...this.props}
         args={this.args}
         items={this.items}
         position={this.position}
         visible={this.visible}
         onClose={() => this.hide()}
-      />,
-      this.el
-    );
+      />)
   }
 }
 
