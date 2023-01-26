@@ -1,19 +1,19 @@
 {
   "name": "rete-context-menu-plugin-react",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Rete ContextMenu plugin - React only version",
   "main": "build/context-menu-plugin.common.js",
   "module": "build/context-menu-plugin.esm.js",
   "scripts": {
     "build": "rete --build rete.config.js",
     "build:dev": "rete --build rete.config.js --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "yarn run build"
   },
-  "author": "Rajasegar Chandran",
+  "author": "Semlar",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rajasegar/rete-context-menu-plugin-react.git"
+    "url": "https://github.com/semlar/rete-context-menu-plugin-react.git"
   },
   "dependencies": {
     "lodash": "^4.17.11",
