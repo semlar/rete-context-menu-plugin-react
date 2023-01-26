@@ -1,7 +1,7 @@
-import ReactMenu, * as ReactComponents from "./react-menu";
 import getMainMenu from "./main-menu";
-import getNodeMenu from "./node-menu";
 import IMenu from "./menu";
+import getNodeMenu from "./node-menu";
+import ReactMenu, * as ReactComponents from "./react-menu";
 
 function install(
   editor,
@@ -45,7 +45,8 @@ function install(
 
     const [x, y] = [e.clientX, e.clientY];
 
-    (node ? nodeMenu : mainMenu).show(x, y, { node });
+    const menu = (node ? nodeMenu : mainMenu);
+    menu.show(x, y, { node });
   });
 }
 
