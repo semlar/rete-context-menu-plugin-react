@@ -1,6 +1,6 @@
+import React, { Component } from "react";
 import Context from "./context";
 import "./style.sass";
-import React, { Component } from "react";
 
 class Item extends Component {
   constructor(props) {
@@ -38,8 +38,8 @@ class Item extends Component {
         {title}
         {subitems && visibleSubitems && (
           <div className="subitems">
-            {subitems.map((subitem) => (
-              <Item item={subitem} />
+            {subitems.map((subitem, index) => (
+              <Item item={subitem} key={index} />
             ))}
           </div>
         )}
