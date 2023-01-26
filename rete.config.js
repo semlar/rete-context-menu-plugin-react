@@ -1,7 +1,7 @@
 import sass from "rollup-plugin-sass";
 
 export default {
-  input: "src/index.js",
+  input: "src/index.jsx",
   name: "ContextMenuPlugin",
   globals: {
     lodash: "_",
