@@ -4,7 +4,8 @@ import Menu from "../menu";
 import { injectItem } from "../utils";
 import ReactMenu from "./Menu";
 
-export default class extends Menu {
+
+class ReactMenuClass extends Menu {
   constructor(editor, props) {
     super(null);
     this.props = props;
@@ -50,3 +51,5 @@ export default class extends Menu {
 }
 
 export { Menu };
+
+export default ReactMenuClass; // aka "ReactMenu"

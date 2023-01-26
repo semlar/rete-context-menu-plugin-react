@@ -13,10 +13,12 @@ function install(
     nodeItems = {},
     allocate = () => [],
     rename = (component) => component.name,
-    Menu = null,
+    Menu = ReactMenu,
+    createRoot,
   }
 ) {
-  if (!Menu) throw new TypeError("Menu must be defined");
+  //if (!Menu) throw new TypeError("Menu must be defined");
+  if (!Menu) Menu = ReactMenu;
 
   editor.bind("hidecontextmenu");
   const mainMenu = new (getMainMenu(Menu))(
